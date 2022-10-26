@@ -1,0 +1,11 @@
+export const UPPERCASE_LIST = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
+export const LOWERCASE_LIST = UPPERCASE_LIST.toLowerCase()
+export const NUMBERS_LIST = '0123456789'
+export const SYMBOLS_LIST = '!@#$%&¿?[]{}<>+=-*'
+
+export const TYPE_OF_LISTS = {
+	UPPERCASE: 'UPPERCASE',
+	LOWERCASE: 'LOWERCASE',
+	SYMBOLS: 'SYMBOLS',
+	NUMBERS: 'NUMBERS',
+}
