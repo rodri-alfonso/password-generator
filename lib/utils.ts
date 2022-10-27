@@ -1,7 +1,5 @@
-import { NUMBERS_LIST, LOWERCASE_LIST, SYMBOLS_LIST, UPPERCASE_LIST, TYPE_OF_LISTS } from './config.ts'
-import { ConfigType } from '../signals/test.ts'
-
-const { UPPERCASE, LOWERCASE, SYMBOLS, NUMBERS } = TYPE_OF_LISTS
+import { NUMBERS_LIST, LOWERCASE_LIST, SYMBOLS_LIST, UPPERCASE_LIST } from './config.ts'
+import { ConfigType } from '../signals/config.ts'
 
 export const purgedArray = (key: ConfigType, array: Array<ConfigType>) => array.filter((item) => item !== key)
 export const getRandomInt = (max: number) => Math.floor(Math.random() * max)
@@ -10,10 +8,10 @@ export const getRandomCharacter = (characters: string) => characters[getRandomIn
 export function generatePassword(length: number, config: Array<ConfigType>) {
 	const getCharacterFromList = (listName: ConfigType) => {
 		return {
-			[UPPERCASE]: getRandomCharacter(UPPERCASE_LIST),
-			[LOWERCASE]: getRandomCharacter(LOWERCASE_LIST),
-			[SYMBOLS]: getRandomCharacter(SYMBOLS_LIST),
-			[NUMBERS]: getRandomCharacter(NUMBERS_LIST),
+			UPPERCASE: getRandomCharacter(UPPERCASE_LIST),
+			LOWERCASE: getRandomCharacter(LOWERCASE_LIST),
+			SYMBOLS: getRandomCharacter(SYMBOLS_LIST),
+			NUMBERS: getRandomCharacter(NUMBERS_LIST),
 		}[listName]
 	}
 
